@@ -1,0 +1,63 @@
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start mt-5 bg-white vh-100">
+    <style>
+        .cascading-right {
+            margin-right: -50px;
+        }
+
+        @media (max-width: 991.98px) {
+            .cascading-right {
+                margin-right: 0;
+            }
+        }
+    </style>
+
+    <!-- Jumbotron -->
+    <div class="container py-4">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-6 mt-5 mb-lg-0">
+                <div class="card cascading-right" style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
+                    <div class="card-body p-5 shadow-5 text-center w-60">
+                        <h2 class="fw-bold mb-5 text-dark">Login</h2>
+
+                        <form action="/login" method="post">
+                        {{#if loginErr}}
+                        <p class="error text-danger">Invalid Username or Password</p>
+                        {{/if}}
+
+                            <!-- Email input -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form3Example3" class="form-control"
+                                placeholder="Email" name="Email" required=" " />
+                                
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form3Example4" class="form-control" name="Password" placeholder="Password"  required=" " />
+                                
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
+                        </form>
+                        
+                        <div>
+                            <p class="mb-0">Don't have an account? <a href="/signup"
+                                    class="text-dark-50 fw-bold" style="text-decoration: none;">SignUp</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-5 mb-lg-0">
+                <h6 class="fw-bold text-secondary d-flex justify-content-center">Welcome Back To</h6>
+                <h1 class="fw-bold text-dark d-flex justify-content-center">ShopIt</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->

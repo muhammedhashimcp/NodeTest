@@ -1,0 +1,70 @@
+<section class=" mt-5 bg-white">
+    <div class="container py-5 h-100 ">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5 w-75">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5 bg-dark text-white">ADD PRODUCT</h3>
+                        <form action="/admin/add-products" method="post" enctype="multipart/form-data">
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Product Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="PdtName" name="prdName" required="">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mt-3">
+                                <label for="catagory" class="col-sm-2 col-form-label">Category</label>
+                                <div class="col-sm-10">
+                                    <select id="catagory" name="Categoryname" class="form-control">
+                                        <option value=""> Select Category</option>
+                                        {{#each catg}}
+                                        <option value="{{this.Categoryname}}">{{this.Categoryname}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Description</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="description" name="Description" required="">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Price</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="price" name="Price" required="">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Image</label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" id="image" name="Image" required="">
+                                </div>
+                            </div>
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Auxiliary Image</label>
+                                <div class="col-sm-10">
+                                    <input type="file" class="form-control" id="images" name="Images" required="">
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline-dark btn-lg btn-block mt-5 " type="submit">Add
+                                Product</button>
+                        </form>
+
+
+
+                        <hr class="my-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

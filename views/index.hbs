@@ -1,0 +1,134 @@
+<section class="bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <h4 class="text-white mt-2">LATEST PRODUCTS</h4>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mt-5 ">
+        <div class="row">
+            {{#each products}}
+            <div class="col-md-3 p-3 d-flex justify-content-center">
+                <div class="shadow-sm" style="width: 18rem; height:28rem ">
+                    <a href="/view-product-details/{{this._id}}"><img src="/ProductImages/{{this.allImages.[0]}}"
+                        class="card-img-top rounded mx-auto d-block p-2" alt="..." style=" height:16rem; width: 13rem">
+                    </a>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.prdName}}</h5>
+                        {{!-- <span class="card-title">{{this.Categoryname}}</span> --}}
+                        <hr>
+                        <h5 class="card-text fw-bold">&#x20b9 {{this.Price}}</h5>
+                    </div>
+                    
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class=" my-5 bg-white">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #45526e">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-warning">
+                            ShopIt Limited
+                        </h6>
+                        <p>
+                            Just ShopIt.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h6>
+                        <p>
+                            <a class="text-white" style="text-decoration: none;">Electronics</a>
+                        </p>
+                        <p>
+                            <a class="text-white" style="text-decoration: none;">Home and Furniture</a>
+                        </p>
+                        <p>
+                            <a class="text-white" style="text-decoration: none;">Fashion</a>
+                        </p>
+                        <p>
+                            <a class="text-white" style="text-decoration: none;">Grocery</a>
+                        </p>
+                        <p>
+                            <a class="text-white" style="text-decoration: none;">Cloths</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-warning">
+                            Developer
+                        </h6>
+                        
+                        <p>
+                            <a class="text-white" style="text-decoration: none;">Vishnu KP</a>
+                        </p>
+                        <p >
+                            vishnukp2529@gmail.com
+                        </p>
+                        <p>
+                            <p><i class="fas fa-phone mr-3"></i> +91 9995 316 806</p>
+                        </p>
+                        <p>
+                            <a class="text-white" href="https://vishnukp29.github.io/vishnukp/" style="text-decoration: none;">Website</a>
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h6>
+                        <p><i class="fas fa-home mr-3"></i> Tirur, Malappuram, Kerala</p>
+                        <p>PIN- 676 102</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info.shopit@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> +91 7012 11 84 96</p>
+                        <p><i class="fa-brands fa-whatsapp mr-3"></i> +91 7012 11 84 96</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+        </div>
+        <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+</div>
+<!-- End of .container -->
+
+
+<script>
+    $(document).ready(function () {
+        $('carousel-item:first-child').addClass('active')
+    })
+</script>

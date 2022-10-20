@@ -1,0 +1,71 @@
+<section class=" mt-5 bg-white">
+    <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5 w-75">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5 bg-black text-white">EDIT PRODUCT</h3>
+                        <form action="/admin/edit-product/{{product._id}}" method="post" enctype="multipart/form-data">
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Product Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="PdtName" name="prdName" value="{{product.prdName}}">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row mt-3">
+                                <label for="catagory" class="col-sm-2 col-form-label">Category</label>
+                                <div class="col-sm-10">
+                                    <select id="catagory" name="Categoryname" class="form-control">
+                                        <option value=""> Select Category</option>
+                                        {{#each catdetails}}
+                                        <option value="{{this.Categoryname}}">{{this.Categoryname}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Description</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="description" name="Description" value="{{product.Description}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Price</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="price" name="Price" value="{{product.Price}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Image</label>
+                                <div class="col-sm-10">
+                                    <img  src="/ProductImages/{{product.allImages.[0]}}" alt="" style="width: 100px; height:auto" >
+                                    <input type="file" class="form-control" id="image" name="Image" value="{{product.allImages.[0].main_i}}">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mt-3">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Auxiliary Image</label>
+                                <div class="col-sm-10">
+                                    <img  src="/ProductImages/{{product.allImages.[0]}}" alt="" style="width: 100px; height:auto">
+                                    <input type="file" class="form-control" id="image" name="Images" value="{{product.allImages.[0].next_i}}">
+                                </div>
+                            </div>
+
+                            <button class="btn btn-outline-dark btn-lg btn-block mt-5 " type="submit">Update
+                                Product</button>
+                        </form>
+
+                        <hr class="my-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

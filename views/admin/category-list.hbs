@@ -1,0 +1,26 @@
+<section class="mt-5 bg-white vh-100">
+    <div class="container ">
+        <div class="row d-flex justify-content-start">
+            <a href="#" style="height: 40px; width:180px" class="btn btn-dark mt-5 mx-3">Category List</a>
+        </div>
+        <table class="table table-light border border-rounded border-secondary mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Category</th>
+                    <th scope="col">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each category_data}}
+                <tr>
+                    <td>{{this.Categoryname}}</td>
+                    <td>
+                        <a href="/admin/edit-category/{{this._id}}" class="btn btn-outline-success" onclick="return confirm('Are You Sure Want to Edit {{this.Categoryname}}')">Edit</a>
+                        <a href="/admin/delete-category/{{this._id}}"class="btn btn-outline-danger" onclick="return confirm('Are You Sure Want to Delete {{this.Categoryname}}')">Delete</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
